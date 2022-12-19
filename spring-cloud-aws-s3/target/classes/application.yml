@@ -1,0 +1,26 @@
+#Application properties
+server:
+  port: 8081
+
+
+#AWS properties
+cloud:
+  aws:
+    region:
+      static: ${AWS_REGION:us-east-1}
+    stack:
+      auto: false
+    credentials:
+      accessKey: ${AWS_ACCESS_KEY_ID:AKIAVQVIWX6Y7O67NHGJ}
+      secretKey: ${AWS_SECRET_ACCESS_KEY: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}
+
+application:
+  bucket:
+    name: ${BUCKET_NAME:sadh-aws-demo}
+
+logging:
+  level:
+    com:
+      amazonaws:
+        util:
+          EC2MetadataUtils: error

@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.techgeeknext.springbootawss3.SpringbootAwsS3ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 11.023 s <<< FAILURE! - in com.techgeeknext.springbootawss3.SpringbootAwsS3ApplicationTests
+contextLoads  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 's3BucketStorageController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 's3BucketStorageService': Unsatisfied dependency expressed through field 'amazonS3Client'; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.amazonaws.services.s3.AmazonS3' available: expected single matching bean but found 2: s3client,amazonS3
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 's3BucketStorageService': Unsatisfied dependency expressed through field 'amazonS3Client'; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.amazonaws.services.s3.AmazonS3' available: expected single matching bean but found 2: s3client,amazonS3
+Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.amazonaws.services.s3.AmazonS3' available: expected single matching bean but found 2: s3client,amazonS3
+
